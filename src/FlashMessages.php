@@ -42,7 +42,7 @@ class FlashMessages extends AbstractExtension
      */
     public function getMessages(): array
     {
-        return $this->flashMessages->getMessages();
+        return $this->flashMessages->getMessages() ?? array();
     }
 
     /**
@@ -51,7 +51,7 @@ class FlashMessages extends AbstractExtension
      */
     public function getMessage(string $key = null): array
     {
-        return $this->flashMessages->getMessage($key);
+        return $this->flashMessages->getMessage($key) ?? array();
     }
 
     /**
